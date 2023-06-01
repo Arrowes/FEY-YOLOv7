@@ -1,0 +1,71 @@
+
+
+
+test: Scanning 'E:\WYJ\yoloair\mydata\Fatigue4\test\labels' images and labels...204 found, 0 missing, 0 empty, 0 corrupt: 100%|██████████| 204/204 [00:05<00:00, 40.00it/s]
+test: New cache created: E:\WYJ\yoloair\mydata\Fatigue4\test\labels.cache
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 7/7 [00:04<00:00,  1.43it/s]
+                 all        204        601      0.975      0.928      0.983       0.69
+          closed_eye        204        100      0.978       0.89      0.973      0.587
+        closed_mouth        204        103      0.989      0.932      0.989      0.748
+            open_eye        204        296      0.976      0.948      0.991      0.661
+          open_mouth        204        102      0.956      0.941      0.978      0.764
+Speed: 0.3ms pre-process, 4.4ms inference, 5.2ms NMS per image at shape (32, 3, 640, 640) 101
+Results saved to runs\val\exp4 4headCA
+
+
+200 epochs completed in 21.839 hours.
+Optimizer stripped from runs\train\exp4 4headCA\weights\last.pt, 12.6MB
+Optimizer stripped from runs\train\exp4 4headCA\weights\best.pt, 12.6MB
+
+Validating runs\train\exp4 4headCA\weights\best.pt...
+Fusing layers... 
+Model Summary: 212 layers, 6093636 parameters, 0 gradients, 13.3 GFLOPs
+               Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 7/7 [00:06<00:00,  1.07it/s]
+                 all        404       1191      0.963      0.933       0.97      0.671
+          closed_eye        404        214      0.949      0.863      0.952       0.58
+        closed_mouth        404        223      0.979      0.937      0.976      0.707
+            open_eye        404        574      0.974      0.965      0.983      0.642
+          open_mouth        404        180       0.95      0.967      0.968      0.755
+Results saved to runs\train\exp4 4headCA
+
+weights: weight\yolov7-tiny.pt
+cfg: configs/yolov7-Improved/WYJ/yolov7-4headCA.yaml
+data: mydata\Fatigue4\data.yaml
+hyp: data\hyps\hyp.scratch-low.yaml
+epochs: 200
+loss: origin
+auxotaloss: false
+otaloss: origin
+batch_size: 32
+imgsz: 640
+rect: false
+resume: false
+nosave: false
+noval: false
+noautoanchor: false
+evolve: null
+bucket: ''
+cache: null
+image_weights: false
+device: ''
+multi_scale: false
+single_cls: false
+optimizer: SGD
+sync_bn: false
+workers: 24
+project: runs\train
+name: exp4 4headCA
+exist_ok: false
+quad: false
+cos_lr: false
+label_smoothing: 0.0
+patience: 50
+freeze:
+- 0
+save_period: -1
+local_rank: -1
+entity: null
+upload_dataset: false
+bbox_interval: -1
+artifact_alias: latest
+save_dir: runs\train\exp4 4headCA
